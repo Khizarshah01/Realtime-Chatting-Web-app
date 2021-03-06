@@ -1,8 +1,8 @@
 const users =[]
 
-function userjoin(id , username , room){
+function userjoin(id ,username ,room ,password){
     if (users.length == 0){
-        const user = {id , username , room}
+        const user = {id , username , room ,password}
         user['message'] = []
         user['online'] = true
         users.push(user)
@@ -10,12 +10,12 @@ function userjoin(id , username , room){
     }else{
         const user = users.find(user => user.username === username && user.room === room)
         if (!user){
-            const user = {id , username , room}
+            const user = {id , username , room ,password}
             users.push(user)
             user['message'] = []
             user['online'] = true
             return user
-        }else if (user && user.online ===false){
+        }else if (user && user.online ===false && user.password === password){
             user.id = id
             user.online = true
             return user

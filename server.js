@@ -14,9 +14,9 @@ const bot = 'watch_dog'
 
 app.use(express.static(`${__dirname}/views`))
 io.on('connection',socket=>{
-    socket.on('join' , ({usrname , room})=>{
-        const user = userjoin(socket.id ,usrname,room)
-        if (user != true){
+    socket.on('join' , ({usrname , room ,password})=>{
+        const user = userjoin(socket.id ,usrname ,room ,password)
+        if (user != true && user != false){
             socket.join(user.room)
             // message on connection
             socket.broadcast.to(user.room).emit('message',msgmaker(bot,`${user.username} has connected ;)`))

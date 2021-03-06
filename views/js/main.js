@@ -1,7 +1,8 @@
 const socket = io();
 var usrname = getParameterByName('name01')
 var room = getParameterByName('roomname')
-socket.emit('join',{usrname , room})
+var password = getParameterByName('password')
+socket.emit('join',{usrname , room ,password})
 socket.on('message',message=>{
     console.log(message)
     appendmsg(message)
