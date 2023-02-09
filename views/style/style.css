@@ -1,0 +1,44 @@
+body{
+   
+    background-image: url("../img/back1.jpg");
+    display: flex;
+    background-repeat: no-repeat;
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+input{
+    background-color: rgb(255, 255, 255);
+    padding: 7px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-shadow: 1px 2px #fddd5d;
+  }
+.Container{
+    background-color: #f31a45;
+    margin: auto;
+    align-items: center;
+    margin-top: 120px;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+#password{
+    margin-top: 7px;
+}
+
+#Sub{
+    margin-top: 10px;
+    background-color: rgb(255, 4, 4);
+    box-shadow: rgba(36, 36, 36, 0.545) 5px 5px;
+}
