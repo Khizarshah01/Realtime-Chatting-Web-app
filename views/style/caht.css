@@ -1,15 +1,16 @@
 body {
-    background-color: #e5e5e5;
+    background-color: #9EB7E5;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
   }
   
   
   .chat-container {
-    background-color: white;
+    background-color: #40F99B;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -18,10 +19,11 @@ body {
     width: 90%;
     max-width: 600px;
     margin-top: 40px;
+    overflow: hidden;
   }
   
   .show_message {
-    background-color: white;
+    background-color: #F8C0C8;
     border-radius: 0 0 10px 10px;
     overflow-y: scroll;
     display: flex;
@@ -30,13 +32,23 @@ body {
     width: 100%;
     padding: 20px;
     height: 70%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide the scrollbar for webkit browsers */
+  .show_message::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent; /* Optional: just make scrollbar invisible */
   }
   
   .message-right {
     margin-bottom: 20px;
     margin-left: auto;
-    background-color: lightblue;
-    color: white;
+    margin-right: 20px;
+    background-color: #F0386B;
+    color: black;
     padding: 10px 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -45,7 +57,8 @@ body {
   .message-left {
     margin-bottom: 20px;
     margin-right: auto;
-    background-color: rgb(186, 238, 207);
+    margin-left: 20px;
+    background-color: #FF5376;
     color: black;
     padding: 10px 20px;
     border-radius: 20px;
@@ -56,8 +69,9 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 5px;
     padding: 20px;
+  
   }
   
   #msg {
@@ -72,8 +86,9 @@ body {
   }
   
   .btn {
-    background-color: lightblue;
-    color: white;
+    margin-top: 10px;
+    background-color: #6CC551;
+    color: rgb(0, 0, 0);
     height: 40px;
     width: 80px;
     border-radius: 20px;
@@ -84,7 +99,8 @@ body {
   }
   
   .btn:hover {
-    background-color: blue;
+    background-color: #447604;
+    color: white;
   }
   
   .meta {
