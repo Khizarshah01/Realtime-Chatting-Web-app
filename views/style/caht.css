@@ -1,25 +1,95 @@
-body{
-    margin: 35px;
+body {
+    background-color: #e5e5e5;
     display: flex;
-    background-repeat: no-repeat;
-    background-color: #cccccc; 
-    height: 500px; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-}
-
-#chat-form{
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  
+  .chat-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 40px;
+  }
+  
+  .show_message {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
+    padding: 20px;
+    height: 70%;
+  }
+  
+  .message-right {
+    margin-bottom: 20px;
+    margin-left: auto;
+    background-color: lightblue;
     color: white;
-    text-align: center;
-}
-
-#msg{
-    width: 1300px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    max-width: 70%;
+  }
+  
+  .message-left {
+    margin-bottom: 20px;
+    margin-right: auto;
+    background-color: rgb(186, 238, 207);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    max-width: 70%;
+  }
+  
+  #chat-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px;
+  }
+  
+  #msg {
+    width: 80%;
     height: 40px;
-
-}
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  .btn {
+    background-color: lightblue;
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: blue;
+  }
+  
+  .meta {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

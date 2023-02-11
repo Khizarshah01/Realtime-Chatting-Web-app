@@ -1,5 +1,6 @@
 const socket = io();
 var usrname = getParameterByName('name01')
+const currentUsername = getParameterByName('name01')
 var room = getParameterByName('roomname')
 var password = getParameterByName('password')
 socket.emit('join',{usrname , room ,password})
@@ -19,12 +20,20 @@ form.addEventListener('submit',(e)=>{
 })
 function appendmsg(message){
     const div = document.createElement('div')
-    div.classList.add('message')
+    if(message.username == currentUsername)
+    {
+        div.classList.add('message-right')
+    }
+    else{
+        div.classList.add('message-left')
+    }
     div.innerHTML = `<p class="meta">${message.username} <span> ${message.time}</span></p>
     <p class="text">
         ${message.message}
     </p>`
-    document.querySelector('.show_message').appendChild(div)
+    document.querySelector('.show_message').appendChild(div);
+
+    document.querySelector('.show_message').scrollTop = document.querySelector('.show_message').scrollHeight;
 }
 function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
